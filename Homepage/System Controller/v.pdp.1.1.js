@@ -1,9 +1,16 @@
 /*  PDP System controller */
- /* The only difference from the PDP  to the homepage is initializing
-  disabled dates on new Hoteldatepicker, and getdate function */
+/*
+  The only difference from the PDP  to the homepage is initializing
+  disabled dates on new Hoteldatepicker, 
+  and getdate function and when dateSaver is run
+*/
 
 /*  Date Initializer */
 $(document).ready(function () {
+
+    setInterval(() => {
+        console.log(localStorage.getItem('bookDates'))
+    }, 500);
 const dateSaver = () => {
     let formDates = {
         checkIn: $("#check-in").text(),
@@ -29,7 +36,6 @@ const initializeGuests = () => {
 }
 
 initializeGuests();
-dateSaver();
 
 $(".home-hero_search-button").on("click", () => {
     dateSaver();
