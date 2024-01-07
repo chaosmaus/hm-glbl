@@ -66,7 +66,7 @@ $("#nav-book_button").on("click", () => {
         let datepicker = new HotelDatepicker(input, {
             startOfWeek: 'monday',
             moveBothMonths: true,
-            minNights: 1,
+            minNights: 2,
             disabledDates: initDates
         });
 
